@@ -12,9 +12,15 @@ for (var i = 0; i < numberOfButtons; i++) {
     makeSound(userChosenColour);
     buttonAnimation(userChosenColour);
     checkAnswer(userPattern.length - 1);
+
   });
 }
-
+document.querySelector("h1").addEventListener("click", function(event) {
+  if (start === true){
+    startGame();
+  }
+  start = false;
+});
 // Add keypress event listener to start the game
 $(document).keypress(function(event) {
   if (start === true){
